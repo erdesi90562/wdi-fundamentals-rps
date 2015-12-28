@@ -53,3 +53,6 @@ function playToFive() {
     return [playerWins, computerWins];
 }
 
+/*  OK so this is from code academy use as ref */
+
+
