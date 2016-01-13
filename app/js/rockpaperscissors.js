@@ -26,7 +26,7 @@ function getPlayerMove(move) {
     // Write an expression that operates on a variable called `move`
     // If a `move` has a value, your expression should evaluate to that value.
     // However, if `move` is not specified / is null, your expression should equal `getInput()`.
-    if(move){
+    if(move === ("rock" || "paper" || "scissors")){
         return move;
     } else {
         console.log("error: getting Player Move");
@@ -38,9 +38,7 @@ function getComputerMove(move) {
     // Write an expression that operates on a variable called `move`
     // If a `move` has a value, your expression should evaluate to that value.
     // However, if `move` is not specified / is null, your expression should equal `randomPlay()`.
-    //var move = randomPlay();
-    if(move){
-        //console.log(move);
+    if(move === ("rock" || "paper" || "scissors")){
         return move;
     } else {
         console.log('error: getting Computer Move');
@@ -74,9 +72,10 @@ function playToFive() {
     // Write code that plays 'Rock, Paper, Scissors' until either the player or the computer has won five times.
     /* YOUR CODE HERE */
     var rounds = 5;
+    var winner = null;
     while ((playerWins < rounds) && (computerWins < rounds)) {
-        var winner = null;
-            winner = getWinner(getPlayerMove(getInput()), getComputerMove(randomPlay()));   
+        winner = getWinner(getPlayerMove(getInput()), getComputerMove(randomPlay()));
+
         if(winner === 'computer') {
             computerWins++;
         } else if (winner === 'player'){
@@ -90,20 +89,4 @@ function playToFive() {
     }
     return [playerWins, computerWins];
 }
-var fiveTimes = playToFive();
-console.log(fiveTimes+' Player then computer');
-
-// var get = getInput();
-// console.log('Get an input:'+get);
-
-// var ran = randomPlay();
-// console.log('Get an random input for the computer : '+ran);
-
-// var playmove = getPlayerMove(get);
-// console.log('The players Move is '+playmove);
-
-// var comMove = getComputerMove(ran);
-// console.log('The Computer Move is '+comMove);
-
-// var winner = getWinner(playmove,comMove);
-// console.log('The Winner of the game is '+winner);
+playToFive();
