@@ -29,7 +29,7 @@ function getPlayerMove(move) {
     if(move === ("rock" || "paper" || "scissors")){
         return move;
     } else {
-        console.log("error: getting Player Move");
+        //console.log("error: getting Player Move");
         return getInput();
     }
 }
@@ -41,7 +41,7 @@ function getComputerMove(move) {
     if(move === ("rock" || "paper" || "scissors")){
         return move;
     } else {
-        console.log('error: getting Computer Move');
+        //console.log('error: getting Computer Move');
         return randomPlay();
     } 
 }
@@ -83,7 +83,7 @@ function playToFive() {
         } else if (winner === 'tie'){
             console.log('TIE!');
         } else {
-            console.log('Error: Get winner has dirty responce. (playToFive)');
+            //console.log('Error: Get winner has dirty responce. (playToFive)');
             return;
         }
     }
